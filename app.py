@@ -1,6 +1,6 @@
 import telebot
 import datetime
-import locale
+# import locale
 from babel.numbers import format_currency
 
 from dbinterface import *
