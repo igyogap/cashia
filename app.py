@@ -120,8 +120,11 @@ class App:
         return total_kas
 
     def format_rupiah(self, amount):
-        # Mengatur locale ke bahasa Indonesia (id_ID) untuk menggunakan format rupiah
-        locale.setlocale(locale.LC_ALL, 'id_ID.UTF-8')
+        try:
+            # Set the locale to Indonesian if available
+            locale.setlocale(locale.LC_ALL, 'id_ID.UTF-8')
+        except locale.Error:
+            print("Indonesian locale is not available on this system.")
 
         # Mengonversi angka menjadi format mata uang rupiah
         formatted_amount = locale.currency(amount, grouping=True, symbol=False)
