@@ -1,6 +1,7 @@
 import telebot
 import datetime
-import locale
+# import locale
+from babel.numbers import format_currency
 
 from dbinterface import *
 
@@ -120,14 +121,26 @@ class App:
         return total_kas
 
     def format_rupiah(self, amount):
-        try:
-            # Set the locale to Indonesian if available
-            locale.setlocale(locale.LC_ALL, 'id_ID')
-        except locale.Error:
-            print("Indonesian locale is not available on this system.")
+        # try:
+        #     # Set the locale to Indonesian if available
+        #     locale.setlocale(locale.LC_ALL, 'id_ID')
+        # except locale.Error:
+        #     print("Indonesian locale is not available on this system.")
 
+<<<<<<< HEAD
         # Mengonversi angka menjadi format mata uang rupiah
         formatted_amount = locale.currency(amount,grouping=True)
+=======
+        # # Mengonversi angka menjadi format mata uang rupiah
+        # formatted_amount = locale.currency(amount, grouping=True, symbol=False)
+
+
+        # Format the currency value for Indonesian Rupiah (IDR)
+        formatted_amount = format_currency(amount, 'IDR', locale='id_ID')
+
+        # Print the formatted currency value
+        # print("Formatted currency:", formatted_currency)
+>>>>>>> d9a7ff17ec4cf14448e2cf21c8867ceec0bd28cd
 
         return formatted_amount
 # Close function Apps
