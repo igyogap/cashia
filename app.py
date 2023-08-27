@@ -127,7 +127,7 @@ class App:
             print("Indonesian locale is not available on this system.")
 
         # Mengonversi angka menjadi format mata uang rupiah
-        formatted_amount = locale.currency(amount, grouping=True, symbol=False)
+        formatted_amount = locale.currency(amount,grouping=True)
 
         return formatted_amount
 # Close function Apps
