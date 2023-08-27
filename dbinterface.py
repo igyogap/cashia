@@ -4,7 +4,7 @@ class DBInterface:
 
     # Connection Database
     def queries(self, sql):
-        mydb = mysql.connector.connect(host="192.168.1.15", user="cashia", password="P3j3ng#99", database="cashia")
+        mydb = mysql.connector.connect(host="192.168.1.15", user="cashia", password="", database="cashia")
         mycursor = mydb.cursor()
         try:
             mycursor.execute(sql)
@@ -14,7 +14,7 @@ class DBInterface:
             print("Error executing SQL Query:",e )
 
     def commands(self, sql):
-        mydb = mysql.connector.connect(host="192.168.1.15", user="cashia", password="P3j3ng#99", database="cashia")
+        mydb = mysql.connector.connect(host="192.168.1.15", user="cashia", password="", database="cashia")
         mycursor = mydb.cursor()
         try:
             mycursor.execute(sql)
