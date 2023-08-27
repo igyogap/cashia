@@ -1,2 +1,4 @@
 dbinterface.py
 dbinterface.pyc
+
+*.pyc
