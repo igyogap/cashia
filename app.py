@@ -122,7 +122,7 @@ class App:
     def format_rupiah(self, amount):
         try:
             # Set the locale to Indonesian if available
-            locale.setlocale(locale.LC_ALL, 'id_ID.UTF-8')
+            locale.setlocale(locale.LC_ALL, 'id_ID')
         except locale.Error:
             print("Indonesian locale is not available on this system.")
 
