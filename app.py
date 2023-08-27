@@ -121,7 +121,7 @@ class App:
 
     def format_rupiah(self, amount):
         # Mengatur locale ke bahasa Indonesia (id_ID) untuk menggunakan format rupiah
-        locale.setlocale(locale.LC_ALL, 'id_ID')
+        locale.setlocale(locale.LC_ALL, 'id_ID.UTF-8')
 
         # Mengonversi angka menjadi format mata uang rupiah
         formatted_amount = locale.currency(amount, grouping=True, symbol=False)
